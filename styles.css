@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    --orang: #ea580c;
+    --grey: #1f2937;
+    --dark: #111827;
+    --shade: #030712;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    color: white;
+    background-color: var(--orang);
+    border-radius: 10px;
+    width: 5rem;
+    height: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d97706;
+}
+
+input {
+    width: 500px;
+    height: 26px;
+    border-radius: 5px;
+    background-color: var(--grey);
+    padding-left: 5px;
+    color: white;
+    border: 1px solid black;
+    box-shadow: 2px 2px black;
+}
+
+input:focus {
+    border: 2px solid #fdba74;
+}
+
+form iconify-icon {
+    position: relative;
+    top: 6px;
+    margin-left: 10px;
+}
+
+.dashboard iconify-icon {
+    position: relative;
+    top: 3px;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--orang);
+    height: 100%;
+    padding: 2rem 0 0 2rem;
+}
+
+.user-nav,
+.settings-nav {
+    display: grid;
+    margin-top: 3rem;
+    gap: 0.5rem;
+}
+
+.dashboard a {
+    font-size: 1.5rem;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 15% auto;
+}
+
+.header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: var(--dark);
+    align-content: center;
+}
+
+.main-body {
+    background-color: var(--grey);
+}
+
+label {
+    display: none;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+form {
+    margin-right: auto;
+    padding: 2rem;
+}
+
+.profile a:last-child {
+    margin-right: 2rem;
+    font-weight: bold;
+}
+
+.hotbar {
+    display: flex;
+    gap: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.hotbar p {
+    margin-right: auto;
+    position: relative;
+    top: 5px;
+}
+
+.hotbar span {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.hotbar button:last-child {
+    margin-right: 2rem;
+}
+
+.main-body {
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 5% repeat(3, 1fr);
+    padding: 1rem;
+    gap: 1rem;
+    height: 90%;
+}
+
+.projects h2 {
+    grid-column: 1 / 3;
+}
+
+.card {
+    background: var(--dark);
+    padding: 2rem;
+    height: 200px;
+    display: grid;
+    grid-template-rows: auto auto;
+    cursor: pointer;
+}
+
+.favicons {
+    place-self: end;
+}
+
+.news {
+    display: grid;
+    grid-template-rows: 5% 1fr 5% auto;
+    padding: 1rem;
+    gap: 1rem;
+    height: 90%;
+}
+
+.announce-card,
+.trending-card {
+    background: var(--dark);
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+.announce-card {
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.trending-card {
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    box-shadow: 6px 4px var(--shade);
+    border-left: 11px solid var(--orang);
+    border-radius: 10px;
+}
+
+.favicons iconify-icon {
+    cursor: pointer;
+}
+
+.favicons iconify-icon:hover {
+    color: var(--orang);
+}
+
+.trending-card div {
+    display: grid;
+    grid-template-columns: 40px auto;
+    grid-template-rows: auto auto;
+    cursor: pointer;
+}
+
+.trending-card img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
